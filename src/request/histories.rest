@@ -1,0 +1,12 @@
+POST http://localhost:3001/myStories
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTY4NDZjZjYzNTI0MGVjMDc2MWYyZSIsIm5hbWVVc2VyIjoiYnJ1bm9fZGV2IiwiaWF0IjoxNjI4NTQxMTI4LCJleHAiOjE2MjkxNDU5Mjh9.TPElPGRTsgbjRA5RGXAZywgeOfeTSAc_AB2mFLFVYLQ
+Content-Type: application/json
+
+{
+    "img":"apokfpofpij"
+}
+
+# {
+#     "idHistorie":"60ff2066b0a5211ae0692541",
+#     "deleteHistorie":false
+# }
