@@ -1,4 +1,5 @@
 const dotenv = require("dotenv")
+dotenv.config();
 const express = require("express")
 const app = express()
 const morgan = require("morgan")
@@ -8,7 +9,6 @@ const handleErrors = require("./middlewares/handleErrors")
 const useExtractor = require("./middlewares/useExtractor")
 require("./database")
 
-dotenv.config();
 app.use(cors())
 app.use(express.json())
 app.use(morgan("dev"))

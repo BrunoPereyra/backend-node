@@ -1,9 +1,9 @@
-POST http://localhost:3001/myStories
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTY4NDZjZjYzNTI0MGVjMDc2MWYyZSIsIm5hbWVVc2VyIjoiYnJ1bm9fZGV2IiwiaWF0IjoxNjI4NTQxMTI4LCJleHAiOjE2MjkxNDU5Mjh9.TPElPGRTsgbjRA5RGXAZywgeOfeTSAc_AB2mFLFVYLQ
+POST http://localhost:5000/myStories
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTY4NDZjZjYzNTI0MGVjMDc2MWYyZSIsIm5hbWVVc2VyIjoiYnJ1bm9fZGV2IiwiaWF0IjoxNjI5MTQyNTg0LCJleHAiOjE2Mjk3NDczODR9.mTc4xYYp4Whn9cLOCSN9GqAshrfzpXQ5eewMvyCiYYc
 Content-Type: application/json
 
 {
-    "img":"apokfpofpij"
+    "img":"apokfpofpij" 
 }
 
 # {
