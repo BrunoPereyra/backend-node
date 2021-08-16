@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 require("colors")
 
-const conectionString = process.env.DBMONGO 
+const conectionString = process.env.DBMONGO || 3001
 
 mongoose.connect(conectionString, {
     useNewUrlParser: true,
