@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 require("colors")
 
-const conectionString = "mongodb+srv://Bruno:UyEYM4rUvyB$TMQ@cluster0.kmdpr.mongodb.net/app-instagram?retryWrites=true&w=majority"
+const conectionString = process.env.DBMONGO 
 
 mongoose.connect(conectionString, {
     useNewUrlParser: true,
@@ -15,9 +15,3 @@ mongoose.connect(conectionString, {
     .catch((error) => {
         console.log(error);
     })
-
-
-process.on('uncaughtException', error => {
-    console.error(error)
-    mongoose.disconnect()
-})
