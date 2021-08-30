@@ -1,7 +1,6 @@
 const Histories = require("../models/histories")
 const myStories = async (req, res) => {
 
-    console.log("si");
     const idUser = req.idUser
     const { idHistorie, deleteHistorie } = req.body
     const idViwsUser = await Histories.findById(idHistorie)

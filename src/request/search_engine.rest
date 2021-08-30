@@ -1,0 +1,7 @@
+POST http://localhost:3001/userSearch
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTY4NDZjZjYzNTI0MGVjMDc2MWYyZSIsIm5hbWVVc2VyIjoiYnJ1bm9fZGV2IiwiaWF0IjoxNjMwMDk5Mjg4LCJleHAiOjE2MzA3MDQwODh9.YxcqmEKAEHZiTz3ut_uuAQ1UmYBpIK_R6R-emam0Spk
+Content-Type: application/json
+
+{
+    "search":"Dios"
+}

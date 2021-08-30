@@ -2,8 +2,8 @@ POST http://localhost:3001/signup
 Content-Type: application/json
 
 {
-    "name":"bruno",
-    "password":"123456789",
+    "name":"Diablo2",
+    "password":"7777772",
     "gmail":"brunopereyra@gmail.com",
-    "nameUser":"bruno_devv"
+    "nameUser":"Diablo2"
 }
