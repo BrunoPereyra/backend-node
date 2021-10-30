@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const { Schema, model } = mongoose
 
-const Shemahistorie = Schema({
+const Shemahistorie = new Schema({
     img: String,
     viws: Number,
     iDviws:Array,

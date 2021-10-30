@@ -1,7 +1,7 @@
 POST http://localhost:3001/follow
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTY4NDZjZjYzNTI0MGVjMDc2MWYyZSIsIm5hbWVVc2VyIjoiYnJ1bm9fZGV2IiwiaWF0IjoxNjI2Nzk3NzgzLCJleHAiOjE2Mjc0MDI1ODN9._zurRPvp_N9I8OM8yImVyBfSmGEZaCr_Lbvmo921GZo
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxM2I4Y2U0YTdmZGY1MzJhNDlmMTAxNiIsIm5hbWVVc2VyIjoic2lpIiwiaWF0IjoxNjMxMjkyOTE2LCJleHAiOjE2MzE4OTc3MTZ9.lzydZb3la_JxsFM8I_rfe8Jpf775qfQmZIOT_QZkPJ8
 Content-Type: application/json
 
 {
-    "stopFollowing":"faa"
-}
+    "newFollower":"bruno_dev"
+}   

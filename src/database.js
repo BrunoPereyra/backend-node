@@ -1,7 +1,8 @@
 const mongoose = require("mongoose")
+const config = require("./config/config")
 require("colors")
 
-const conectionString = process.env.DBMONGO || "mongodb+srv://Bruno:UyEYM4rUvyB$TMQ@cluster0.kmdpr.mongodb.net/app-instagram?retryWrites=true&w=majority"
+const conectionString = config.database.URL || "mongodb+srv://Bruno:UyEYM4rUvyB$TMQ@cluster0.kmdpr.mongodb.net/app-instagram?retryWrites=true&w=majority"
 
 mongoose.connect(conectionString, {
     useNewUrlParser: true,

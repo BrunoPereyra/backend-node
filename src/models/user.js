@@ -6,21 +6,25 @@ const Schemauser = new Schema({
     password: String,
     gmail: String,
     photoUrl: String,
-    nameUser:String,
+    nameUser: String,
     date: Date,
-    followers:Array,
-    following:Array,
-    biografia:{
+    followers: Array,
+    following: Array,
+    biografia: {
         nacimiento: Number,
-        infoUser:String
+        infoUser: String
     },
-    posts:[{
-        type:Schema.Types.ObjectId,
-        ref:"Posts"
+    posts: [{
+        type: Schema.Types.ObjectId,
+        ref: "Posts"
+    }],
+    messages: [{
+        type: Schema.Types.ObjectId,
+        ref: "Messages"
     }]
 })
-Schemauser.set("toJSON",{
-    transform:(returnedObject) => {
+Schemauser.set("toJSON", {
+    transform: (returnedObject) => {
         returnedObject.id = returnedObject._id
         delete returnedObject._id
         delete returnedObject.__v
@@ -30,6 +34,6 @@ Schemauser.set("toJSON",{
 })
 
 
-const User = model("User",Schemauser)
+const User = model("User", Schemauser)
 
 module.exports = User

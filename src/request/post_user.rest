@@ -1,6 +1,6 @@
 POST http://localhost:3001/post
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOWFkNjhjY2YzYzRjMjBjN2Y5Zjk5OSIsIm5hbWVVc2VyIjoiYnJ1bm9fZGV2diIsImlhdCI6MTYyMDc2MDg3NCwiZXhwIjoxNjIxMzY1Njc0fQ.C48Y4EsrxGXnEvXQ79CJEMJn6Hs8s81FuaSGrF133aE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxM2I4Y2U0YTdmZGY1MzJhNDlmMTAxNiIsIm5hbWVVc2VyIjoic2lpIiwiaWF0IjoxNjM1MDk5NTQ1LCJleHAiOjE2MzU3MDQzNDV9.TKT-bwe8PWythRw1vOXzJFDCnr_gP6bzelPKE6ao-8Y
 
 {
     "imgUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmYL8DoYk_CzpIT5N8qJsuv9HQJOzkbh8OBdnkdEYApkBMEeOW91_FN47q0y9PGe8lw7s&usqp=CAU",

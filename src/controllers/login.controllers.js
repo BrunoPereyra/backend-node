@@ -20,7 +20,7 @@ async function login(req, res) {
         nameUser: nameUser
     }
     const token = jwt.sign(
-        userForToken, 
+        userForToken,
         "123",
         {
             expiresIn: 60 * 60 * 24 * 7

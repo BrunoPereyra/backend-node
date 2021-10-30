@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express")
 const app = express()
 const morgan = require("morgan")
@@ -6,13 +5,20 @@ const cors = require("cors")
 const notFound = require("./middlewares/notFound")
 const handleErrors = require("./middlewares/handleErrors")
 const useExtractor = require("./middlewares/useExtractor")
+const http = require('http')
 require("./database")
 
-
+const socket = require("./socket")
+const server = http.createServer(app)
+const io = require('socket.io')(server, {
+  cors: {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST", "PUT", "DELETE"]
+  }
+})
 app.use(cors())
 app.use(express.json())
 app.use(morgan("dev"))
-
 
 app.use("/post", useExtractor, require("./routes/post.routes"))
 app.use("/login", require("./routes/login.routes"))
@@ -24,31 +30,15 @@ app.use("/follow", useExtractor, require("./routes/follow.routes"))
 app.use("/myStories", useExtractor, require("./routes/myStories.routes"))
 app.use("/getStories", useExtractor, require("./routes/gethistories.routes"))
 app.use("/userSearch", useExtractor, require("./routes/search_engine.routes"))
+app.use("/chat", require("./routes/chatSocket.routes"))
 
 app.use(notFound)
 app.use(handleErrors)
 
-
-const PORT = process.env.PORT || 3001
-
-app.listen(PORT, ()=> {
-  console.log(process.env.ASD);
-  console.log(`listen on port ${PORT}`.bgWhite.black);
+server.listen(3001, () => {
+  console.log(`server listen on port 3001`.bgWhite.black);
 })
-// var server = require('http').createServer(app)
-// var io = require('socket.io')(server,{
-//   cors: {
-//     origin: "http://localhost:3000",
-//     methods: ["GET", "POST","PUT","DELETE"]
-//   }
-// })
 
-// _______________________________________________
+socket(io)
 
- // io.on("connection", (socket) => {
-  //     // console.log("Un cliente se ha conectado".bgBlue);
-  //   });
 
-// server.listen(PORT, () => {
-//     console.log(`listen on port ${PORT}`.bgWhite.black);
-// })  
