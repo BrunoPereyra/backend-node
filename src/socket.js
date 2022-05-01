@@ -15,25 +15,22 @@ module.exports = (io) => {
                 })
                 newMessage.save()
             }
-        })                  
-        socket.on("client:showChat", async (nameUser) => {
+        })
+        socket.on("client:showChat", async () => {
             try {
-                const ChatSocket = await Message.find(
-                    { nameUser: "bruno_dev" },
-                    { __v: 0},
-                    (err, result) => {
-                        if (err) {
-                            io.emit("server:showChat", {
-                                err: "resource not found"
-                            })
-                        } else if (result) {
-                            io.emit("server:showChat", {
-                                   result
-                            })
-                        }
-                    })
+                await Message.find({}, (err, result) => {
+                    if (err) {
+                        io.emit("server:showChat", {
+                            err: "resource not found"
+                        })
+                    } else if (result) {
+                        io.emit("server:showChat", {
+                            result
+                        })
+                    }
+                })
             } catch (error) {
-                console.log(error);
+                console.log(error, "este es el error");
             }
         })
     });
